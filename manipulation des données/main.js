@@ -196,10 +196,25 @@ function password() {
 // Exo 9: Convertisseur Celsius-Fahrenheit :
 // Crée une fonction qui prend une température en Celsius et la convertit en Fahrenheit. La formule est : F = C * 9/5 + 32. Utilise la fonction pour convertir une température et afficher le résultat.
 
+function convertirTemp() {
+  let celsius = prompt("Saisissez la température en Celsius :");
+  let fahrenheit = (Number(celsius) * 9) / 5 + 32;
+  alert("La température en Fahrenheit est : " + fahrenheit);
+}
+
 // appellez la fonction pour pouvoir executer le programme !!
 
 // ---------------------------------------------------------------------------------
 // Exo 10: Filtrer un tableau :
 // Déclare un tableau de nombres (par exemple, [2, 8, 5, 13, 4, 6, 7]). Utilise une boucle pour créer un nouveau tableau qui contient seulement les nombres supérieurs à 5, puis affiche ce nouveau tableau.
+
+let ancienTableau = [2, 8, 5, 13, 4, 6, 7];
+let nouveauTableau = [];
+ancienTableau.forEach((element) => {
+  if (element > 5) {
+    nouveauTableau.push(element);
+  }
+  console.log(nouveauTableau);
+});
 
 // appellez la fonction pour pouvoir executer le programme !!
