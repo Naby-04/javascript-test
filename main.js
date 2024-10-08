@@ -39,4 +39,32 @@ function filtrageNombre() {
     console.log(a + " est nul");
   }
 }
-filtrageNombre();
+// appellez la fonction pour pouvoir executer le programme !!
+
+// -------------------------------------------------------
+// Exo-3: Calcul de l’âge :
+// Déclare une variable pour l’année actuelle et une autre pour ton année de naissance. Calcule et affiche ton âge en utilisant une opération de soustraction.
+
+function calculAge() {
+  let naissance;
+  let année;
+  let âge;
+
+  while (true) {
+    let x = prompt("Quel est votre année de naissance ?");
+    naissance = Number(x); // Conversion et assignation de la valeur
+    if (!isNaN(naissance)) {
+      break;
+    }
+  }
+  while (true) {
+    let a = prompt("Vous voullez savoir quel âge vous aurez en quel année ?");
+    année = Number(a);
+    if (!isNaN(année)) {
+      break;
+    }
+  }
+  âge = année - naissance;
+  alert("Si nous étions en " + année + " vous aurez " + âge + " ans.");
+}
+calculAge();
