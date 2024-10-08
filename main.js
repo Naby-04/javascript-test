@@ -178,6 +178,17 @@ tableau.forEach((element) => {
 // ---------------------------------------------------------------------------------
 // Exo 8: Conditions avancées :
 // Demande un mot de passe à l’utilisateur. Si le mot de passe est "javascript123", affiche "Accès autorisé", sinon affiche "Accès refusé".
+function password() {
+  while (true) {
+    let password = prompt("Saisissez le mot de passe !");
+    if (password == "javascript123") {
+      alert("Accès autorisé");
+      break;
+    } else {
+      let password = prompt("Accès refusé. Saisissez le mot de passe !");
+    }
+  }
+}
 
 // appellez la fonction pour pouvoir executer le programme !!
 
