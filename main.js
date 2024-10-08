@@ -144,12 +144,34 @@ function tableDeMultiplication(a) {
 // ---------------------------------------------------------------------------------
 // Exo 6: Trouver les nombres pairs :
 // Écris une boucle for pour afficher tous les nombres pairs de 1 à 20.
+function nombresPairs() {
+  for (let i = 0; i <= 20; i++) {
+    if (i % 2 == 0) {
+      // un nombre est pair si son modulo est egale à 0.
+      console.log(i + " est un nombre pair.");
+    } else {
+      console.log(i + " est un nombre impair.");
+    }
+  }
+}
+nombresPairs();
 
 // appellez la fonction pour pouvoir executer le programme !!
 
 // ---------------------------------------------------------------------------------
 // Exo 7: Boucle et tableau :
 // Crée un tableau de cinq couleurs (par exemple : rouge, vert, bleu, jaune, noir). Utilise une boucle pour afficher chaque couleur en console.
+
+let tableau = [];
+tableau[0] = "Rouge";
+tableau[1] = "Vert";
+tableau[2] = "Bleu";
+tableau[3] = "Jaune";
+tableau[4] = "Noir";
+console.log(tableau);
+tableau.forEach((element) => {
+  console.log(element);
+});
 
 // appellez la fonction pour pouvoir executer le programme !!
 
