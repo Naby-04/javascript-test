@@ -218,3 +218,25 @@ ancienTableau.forEach((element) => {
 });
 
 // appellez la fonction pour pouvoir executer le programme !!
+
+// ----------------------------------------------------------
+
+// Exo 11: Calculer la table de multiplication que l'utilisateur veut savoir:
+
+function tableMultiplication() {
+  var table = 0;
+  while (true) {
+    let y = prompt(
+      "Vous voulez savoir la table de multiplication de quel nombre ?"
+    );
+    var table = Number(y);
+    if (!isNaN(table)) {
+      break; // Sortie de la boucle si 'b' est un nombre valide
+    }
+  }
+  for (let i = 0; i <= 10; i++) {
+    let resultat = table * i;
+    console.log(table + " x " + i + " = " + resultat);
+  }
+}
+tableMultiplication();
