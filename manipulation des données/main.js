@@ -239,4 +239,35 @@ function tableMultiplication() {
     console.log(table + " x " + i + " = " + resultat);
   }
 }
-tableMultiplication();
+// appellez la fonction pour pouvoir executer le programme !!
+
+// ----------------------------------------------------------
+
+// Exo12:Écrire un programme qui demande à un utilisateur d’écrire son âge, et lui retourne sa catégorie d’âge.
+//  NB: 0   à   14 ans  => Enfants
+//      15  à   25 ans  => Adolescents
+//      25  à   64 ans  => Adultes
+//      65 ans et plus  => Aînés
+
+function categorieAge() {
+  while (true) {
+    var age = prompt("Papa pardon il faut rentrer ton Âge !");
+    var ageNumber = Number(age);
+    if (!isNaN(ageNumber)) {
+      break;
+    }
+  }
+  if (ageNumber <= 14) {
+    alert("hahaha! tu es un enfant !!");
+  } else if (ageNumber <= 25) {
+    alert(
+      "Mon petit profite de Ton ADOLESCENCE mais prepare toi la vie commence à devenir serieuse ici !"
+    );
+  } else if (ageNumber <= 64) {
+    alert("Ahh! PAPA pardon! comment vas la vie d'ADULTE ?");
+  } else {
+    alert("Vieux Père! vous êtes mon AÎNÉ !");
+  }
+}
+categorieAge();
+// appellez la fonction pour pouvoir executer le programme !!
