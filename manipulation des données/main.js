@@ -82,14 +82,14 @@ function Operateurs() {
   while (true) {
     let x = prompt("Veillez renter un premier nombre");
     a = Number(x);
-    if (!isNaN(a)) {
+    if (!isNaN(a) && a != 0) {
       break; // Sortie de la boucle si 'a' est un nombre valide
     }
   }
   while (true) {
     let y = prompt("Veillez renter un deuxieme nombre");
     b = Number(y);
-    if (!isNaN(b)) {
+    if (!isNaN(b) && b != 0) {
       break; // Sortie de la boucle si 'b' est un nombre valide
     }
   }
@@ -127,7 +127,7 @@ function Operateurs() {
       division
   );
 }
-
+Operateurs();
 // appellez la fonction pour pouvoir executer le programme !!
 // ---------------------------------------------------------------------------------
 // Exo 5: Fonction de multiplication :
@@ -251,23 +251,21 @@ function tableMultiplication() {
 
 function categorieAge() {
   while (true) {
-    var age = prompt("Papa pardon il faut rentrer ton Âge !");
+    var age = prompt("Veillez renseigner votre Âge !");
     var ageNumber = Number(age);
     if (!isNaN(ageNumber)) {
       break;
     }
   }
   if (ageNumber <= 14) {
-    alert("hahaha! tu es un enfant !!");
+    alert("tu es un enfant !!");
   } else if (ageNumber <= 25) {
-    alert(
-      "Mon petit profite de Ton ADOLESCENCE mais prepare toi la vie commence à devenir serieuse ici !"
-    );
+    alert("Tu es un ADOLESCENCE !");
   } else if (ageNumber <= 64) {
-    alert("Ahh! PAPA pardon! comment vas la vie d'ADULTE ?");
+    alert("Tu es un ADULTE");
   } else {
-    alert("Vieux Père! vous êtes mon AÎNÉ !");
+    alert("vous êtes AÎNÉ !");
   }
 }
-categorieAge();
+// categorieAge();
 // appellez la fonction pour pouvoir executer le programme !!
