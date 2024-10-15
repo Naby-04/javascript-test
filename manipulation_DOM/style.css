@@ -2,25 +2,95 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: sans-serif;
+}
+:root {
+  --primary-color: #03301f;
+  --secondary-color: #126945;
+  --hover-color: #108554;
+  --box-color: #03301f;
+  --text-white: #fff;
 }
 /*---------------------------------- css general ----------------------------------*/
-body {
-  padding: 10px;
-}
+
 section:nth-child(even) {
-  background: #dddddd;
+  background: var(--primary-color);
 }
 section {
-  /* height: fit-content; */
-  min-height: 20px;
+  background: var(--secondary-color);
   padding: 50px 10px;
+  height: 100vh;
+}
+h1,
+h2,
+h3 {
+  width: fit-content;
+  margin: auto;
+  color: var(--text-white);
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+h2 {
+  margin-bottom: 30px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.subtitles {
+  padding: 10px;
+  color: var(--text-white);
+  font-size: 20px;
+  width: 800px;
+  margin: 30px auto;
+}
+.subtitles li {
+  list-style: circle;
+  margin-top: 10px;
 }
 /*-------------------------------- css exo-1 --------------------------------*/
-.ex0-1 ul li {
-  margin-bottom: 10px;
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+ul li {
+  padding: 10px;
+  background: var(--box-color);
+  color: var(--text-white);
+  font-size: 18px;
+  border-radius: 5px;
+  flex: 1 1 auto;
+  text-align: center;
+  transition: all 0.5s;
+}
+ul li:hover {
+  background: var(--hover-color);
 }
 /*-------------------------------- css exo-1 exit --------------------------------*/
 /*-------------------------------- css exo-2 --------------------------------*/
+.box-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ex0-2 p {
+  padding: 10px;
+  /* color: var(--box-color); */
+}
+.box {
+  height: 50px;
+  width: 50px;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  flex: 1 1 auto;
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*-------------------------------- css exo-2 exit --------------------------------*/
 /*-------------------------------- css exo-3 --------------------------------*/
 /*-------------------------------- css exo-3 exit --------------------------------*/

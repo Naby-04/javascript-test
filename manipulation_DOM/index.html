@@ -10,12 +10,98 @@
     <div class="container">
       <!----------------------------------- EXO-1 ----------------------------------->
       <section class="ex0-1">
+        <h1>Création, Ajout, et Suppression d’Éléments</h1>
+        <h2>Ajouter un nouvel élément à une liste</h2>
+        <h3>
+          Crée une liste 'ul' vide dans ton HTML. <br />
+          En JavaScript, utilise createElement et appendChild <br />
+          pour ajouter trois éléments 'li' à cette liste avec des textes
+          différents.
+        </h3>
         <ul class="List"></ul>
+        <div class="subtitles">
+          <p>Voici les étapes que j'ai suivies :</p>
+
+          <ol>
+            <li>
+              D’abord, j’ai accédé à ma liste en utilisant la fonction
+              <strong>`querySelector ()`</strong>, qui permet de sélectionner un
+              élément dans le <strong>DOM</strong> (d’autres méthodes existent
+              pour faire cela).
+            </li>
+            <li>
+              Ensuite, j’ai créé un tableau contenant mes différents textes,
+              comme "I'm my mama's ..." pour chacun des éléments à ajouter.
+            </li>
+            <li>
+              Pour terminer, j’ai utilisé la boucle
+              <strong>`forEach ()`</strong> pour parcourir chaque élément du
+              tableau. Pour chaque texte, j’ai créé un nouvel élément `li` en
+              utilisant <strong>`createElement ()`</strong>, puis j’ai ajouté le
+              texte correspondant. Finalement, j’ai utilisé
+              <strong>`appendChild ()`</strong> pour insérer chaque nouvel
+              élément dans la liste, afin de les afficher dans le document.
+            </li>
+          </ol>
+        </div>
       </section>
       <!----------------------------------- EXO-3 ----------------------------------->
-      <section class="ex0-2"></section>
+      <section class="ex0-2">
+        <div class="box-container">
+          <div class="box"></div>
+          <div class="box" id="box-1"></div>
+          <div class="box"></div>
+        </div>
+        <div class="subtitles">
+          <p>Voici les étapes que j'ai suivies :</p>
+
+          <ol>
+            <li>
+              Pour cet exercice, j’ai accédé à mes éléments à l’aide de deux
+              fonctions différentes : <strong>`getElementById()`</strong> et
+              <strong>`getElementsByClassName()`</strong>.
+            </li>
+            <li>
+              Ensuite, j’ai créé un nouvel élément `div` avec la fonction
+              <strong>`createElement()`</strong>, puis j’ai ajouté la classe
+              `"box"` en utilisant la propriété <strong>`className`</strong>.
+            </li>
+            <li>
+              Pour terminer, j’ai utilisé la fonction
+              <strong>`insertBefore()`</strong> pour afficher le nouvel élément
+              dans le DOM.
+            </li>
+          </ol>
+          <p>
+            <strong>Attention !</strong> La méthode `insertBefore()` nécessite
+            un seul élément parent et une référence unique pour insérer le
+            nouvel élément correctement. Pour cela, il est important de
+            sélectionner spécifiquement le premier élément d’une collection.
+            Dans ce cas, il est préférable d’utiliser `getElementById()` plutôt
+            que `getElementsByClassName()` pour éviter les problèmes de
+            sélection multiple.
+          </p>
+        </div>
+      </section>
       <!----------------------------------- EXO-2 ----------------------------------->
-      <section class="ex0-3"></section>
+      <section class="ex0-3">
+        <p>Voici l'affichage initial:</p>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+        <p>Voici l'affichage aprés:</p>
+        <ul id="list">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </section>
       <!----------------------------------- EXO-4 ----------------------------------->
       <section class="ex0-4"></section>
       <!----------------------------------- EXO-5 ----------------------------------->

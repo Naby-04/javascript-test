@@ -3,26 +3,42 @@
 // Crée une liste <ul> vide dans ton HTML. En JavaScript, utilise createElement et appendChild pour ajouter trois éléments <li> à cette liste avec des textes différents.
 
 let list = document.querySelector(".List");
-if (list) {
-  let textArray = [
-    "I'm my mama's first child",
-    "I'm my mama's second child",
-    "I'm my mama's third child",
-  ];
-  textArray.forEach((text) => {
-    let item = document.createElement("li");
-    item.textContent = text;
-    list?.appendChild(item);
-  });
-}
+let textArray = [
+  "I'm my mama's first child",
+  "I'm my mama's second child",
+  "I'm my mama's third child",
+];
+textArray.forEach((text) => {
+  let item = document.createElement("li");
+  item.textContent = text;
+  list?.appendChild(item);
+});
 
 // ---------------------------------------------------------------------------------
 // Ajouter un élément avant un autre
 // Crée un conteneur avec plusieurs éléments enfants. Utilise insertBefore pour ajouter un nouvel élément avant un élément spécifique.
+
+let oldBox = document.getElementById("box-1");
+let container = document.getElementsByClassName("box-container")[0];
+let newbox = document.createElement("div");
+newbox.className = "box";
+newbox.textContent = "Je suis le nouvel element ajouté";
+if (container) {
+  //verifie que le container existe reelement
+  container.insertBefore(newbox, oldBox);
+}
 // ---------------------------------------------------------------------------------
 
 // Supprimer le dernier élément d’une liste
 // Crée une liste avec plusieurs éléments <li>. Utilise JavaScript pour sélectionner le dernier élément de cette liste et le supprimer avec removeChild.
+
+let List = document.getElementById("list");
+if (List && List.lastElementChild) {
+  // pour verifier que la liste n'est pas vide
+  List.removeChild(List.lastElementChild);
+} else {
+  console.log("La liste est vide");
+}
 
 // ---------------------------------------------------------------------------------
 

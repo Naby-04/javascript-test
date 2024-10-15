@@ -267,5 +267,4 @@ function categorieAge() {
     alert("vous êtes AÎNÉ !");
   }
 }
-// categorieAge();
 // appellez la fonction pour pouvoir executer le programme !!
