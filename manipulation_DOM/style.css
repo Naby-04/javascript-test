@@ -11,6 +11,21 @@
   --box-color: #03301f;
   --text-white: #fff;
 }
+/* css highlight */
+/* Exemple de style personnalisé */
+.hljs-keyword {
+  color: #ff79c6; /* couleur des mots-clés */
+}
+.hljs-string {
+  color: #f1fa8c; /* couleur des chaînes de caractères */
+}
+.hljs-comment {
+  color: #4f4f4f; /* couleur des commentaires */
+}
+.hljs-function {
+  color: #50fa7b; /* couleur des fonctions */
+}
+/* css highlight exit */
 /*---------------------------------- css general ----------------------------------*/
 
 section:nth-child(even) {
@@ -19,7 +34,8 @@ section:nth-child(even) {
 section {
   background: var(--secondary-color);
   padding: 50px 10px;
-  height: 100vh;
+  height: fit-content;
+  padding: 50px 10px;
 }
 h1,
 h2,
@@ -69,6 +85,10 @@ ul li {
 ul li:hover {
   background: var(--hover-color);
 }
+code {
+  margin: 10px 0;
+  border-radius: 5px;
+}
 /*-------------------------------- css exo-1 exit --------------------------------*/
 /*-------------------------------- css exo-2 --------------------------------*/
 .box-container {
@@ -93,8 +113,23 @@ ul li:hover {
 }
 /*-------------------------------- css exo-2 exit --------------------------------*/
 /*-------------------------------- css exo-3 --------------------------------*/
+
 /*-------------------------------- css exo-3 exit --------------------------------*/
 /*-------------------------------- css exo-4 --------------------------------*/
+.container-null img {
+  display: block;
+  height: 500px;
+  width: 400px;
+  margin: 10px auto;
+}
+.container-null p {
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  color: var(--text-white);
+  width: 550px;
+  text-align: center;
+}
 /*-------------------------------- css exo-4 exit --------------------------------*/
 /*-------------------------------- css exo-5 --------------------------------*/
 /*-------------------------------- css exo-5 exit --------------------------------*/

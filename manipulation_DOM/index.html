@@ -3,8 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -20,6 +32,25 @@
         </h3>
         <ul class="List"></ul>
         <div class="subtitles">
+          <pre>
+            <code>
+              let list = document.querySelector(".List");
+              if (list) {
+                let textArray = [
+                  "I'm my mama's first child",
+                  "I'm my mama's second child",
+                  "I'm my mama's third child",
+                ];
+                textArray.forEach((text) => {
+                  let item = document.createElement("li");
+                  item.textContent = text;
+                  list?.appendChild(item);
+                });
+              }else {
+                console.log("La liste est vide");
+              }
+            </code>
+          </pre>
           <p>Voici les étapes que j'ai suivies :</p>
 
           <ol>
@@ -52,6 +83,19 @@
           <div class="box" id="box-1"></div>
           <div class="box"></div>
         </div>
+        <pre>
+          <code class="language-javascript">
+            let oldBox = document.getElementById("box-1");
+            let container = document.getElementsByClassName("box-container")[0];
+            let newbox = document.createElement("div");
+            newbox.className = "box";
+            newbox.textContent = "Je suis le nouvel element ajouté";
+            if (container) {
+              //verifie que le container existe reelement
+              container.insertBefore(newbox, oldBox);
+            }
+          </code>
+        </pre>
         <div class="subtitles">
           <p>Voici les étapes que j'ai suivies :</p>
 
@@ -101,9 +145,41 @@
           <li>4</li>
           <li>5</li>
         </ul>
+        <pre>
+          <code class="language-javascript">
+            let List = document.getElementById("list");
+            if (List && List.lastElementChild) {
+              // pour verifier que la liste n'est pas vide
+              List.removeChild(List.lastElementChild);
+            } else {
+              console.log("La liste est vide");
+            }
+          </code>
+        </pre>
       </section>
       <!----------------------------------- EXO-4 ----------------------------------->
-      <section class="ex0-4"></section>
+      <section class="ex0-4">
+        <div class="container-null">
+          <pre>
+            <code class="language-javascript">
+              let containerVide = document.getElementsByClassName("container-null");
+              if (containerVide) {
+                let title = document.createElement("h2");
+                title.textContent = "Titre de la carte d'information";
+                let image = document.createElement("img");
+                image.src =
+                  "https://m.media-amazon.com/images/I/61aQBGDwXCL._AC_UF1000,1000_QL80_.jpg";
+                let paragraph = document.createElement("p");
+                paragraph.textContent =
+                  "Il fut le premier membre à rejoindre l'Équipage du Chapeau de Paille, il en est le premier et principal épéiste. Son ambition est de devenir le meilleur sabreur au monde et il a d'ailleurs montré une volonté de fer dans le but d'y parvenir.";
+                containerVide[0].appendChild(title);
+                containerVide[0].appendChild(image);
+                containerVide[0].appendChild(paragraph);
+              }
+            </code>
+          </pre>
+        </div>
+      </section>
       <!----------------------------------- EXO-5 ----------------------------------->
       <section class="ex0-5"></section>
       <!----------------------------------- EXO-6 ----------------------------------->

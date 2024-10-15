@@ -3,16 +3,20 @@
 // Crée une liste <ul> vide dans ton HTML. En JavaScript, utilise createElement et appendChild pour ajouter trois éléments <li> à cette liste avec des textes différents.
 
 let list = document.querySelector(".List");
-let textArray = [
-  "I'm my mama's first child",
-  "I'm my mama's second child",
-  "I'm my mama's third child",
-];
-textArray.forEach((text) => {
-  let item = document.createElement("li");
-  item.textContent = text;
-  list?.appendChild(item);
-});
+if (list) {
+  let textArray = [
+    "I'm my mama's first child",
+    "I'm my mama's second child",
+    "I'm my mama's third child",
+  ];
+  textArray.forEach((text) => {
+    let item = document.createElement("li");
+    item.textContent = text;
+    list?.appendChild(item);
+  });
+} else {
+  console.log("La liste est vide");
+}
 
 // ---------------------------------------------------------------------------------
 // Ajouter un élément avant un autre
@@ -44,6 +48,23 @@ if (List && List.lastElementChild) {
 
 // Créer une carte d’information avec du contenu dynamique
 // Crée une <div> vide en HTML. Utilise JavaScript pour y ajouter un titre <h2>, une image <img>, et un paragraphe <p> avec du texte. Ajoute tous ces éléments en tant qu’enfants de la <div>.
+
+let containerVide = document.getElementsByClassName("container-null");
+if (containerVide) {
+  let title = document.createElement("h2");
+  title.textContent = "Titre de la carte d'information";
+  let image = document.createElement("img");
+  image.src =
+    "https://m.media-amazon.com/images/I/61aQBGDwXCL._AC_UF1000,1000_QL80_.jpg";
+  let paragraph = document.createElement("p");
+  paragraph.textContent =
+    "Il fut le premier membre à rejoindre l'Équipage du Chapeau de Paille, il en est le premier et principal épéiste. Son ambition est de devenir le meilleur sabreur au monde et il a d'ailleurs montré une volonté de fer dans le but d'y parvenir.";
+  containerVide[0].appendChild(title);
+  containerVide[0].appendChild(image);
+  containerVide[0].appendChild(paragraph);
+} else {
+  console.log("La liste est vide");
+}
 
 // ---------------------------------------------------------------------------------
 
