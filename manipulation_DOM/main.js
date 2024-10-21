@@ -114,6 +114,14 @@ contentChange?.addEventListener("click", function () {
 // Changer l’image au survol
 // Crée une balise <img> avec une image initiale. Utilise addEventListener pour changer l’attribut src de l’image lors du survol (mouseover) et le remettre à l’image originale lorsque la souris quitte l’image (mouseout).
 
+let imageChange = document.getElementById("imageChange");
+imageChange?.addEventListener("mouseover", function imagechange() {
+  imageChange.src = "images/fun.jpg";
+});
+imageChange?.addEventListener("mouseout", function Imagechange() {
+  imageChange.src = "images/luffy.jpg";
+});
+
 // ---------------------------------------------------------------------------------
 
 // Afficher la longueur du texte entré
