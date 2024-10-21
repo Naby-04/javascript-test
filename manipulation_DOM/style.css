@@ -66,6 +66,7 @@ h3 {
   list-style: circle;
   margin-top: 10px;
 }
+
 /*-------------------------------- css exo-1 --------------------------------*/
 ul {
   display: flex;
@@ -106,6 +107,8 @@ code {
   background: var(--secondary-color);
   border-radius: 5px;
   flex: 1 1 auto;
+  min-width: 180px;
+  text-align: center;
   color: var(--text-white);
   display: flex;
   justify-content: center;
@@ -127,7 +130,6 @@ code {
   margin: 0 auto;
   font-size: 18px;
   color: var(--text-white);
-  width: 550px;
   text-align: center;
 }
 /*-------------------------------- css exo-4 exit --------------------------------*/
@@ -136,14 +138,18 @@ button {
   padding: 10px 40px;
   border-radius: 10px;
   border: none;
-  background: #03301f;
-  color: var(--text-white);
+  background: #fff;
+  color: #000;
+  cursor: pointer;
 }
 .highlight {
   color: #fff;
 }
 /*-------------------------------- css exo-5 exit --------------------------------*/
 /*-------------------------------- css exo-6 --------------------------------*/
+.ex0-6 p {
+  color: #fff;
+}
 /*-------------------------------- css exo-6 exit --------------------------------*/
 /*-------------------------------- css exo-7 --------------------------------*/
 /*-------------------------------- css exo-7 exit --------------------------------*/

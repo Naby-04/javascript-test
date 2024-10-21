@@ -82,15 +82,32 @@ function highlight() {
 // Écouter l’événement de clic
 // Crée un bouton en HTML. En JavaScript, utilise addEventListener pour écouter l’événement click sur ce bouton et afficher une alerte.
 
+let button = document.getElementById("Events");
+button?.addEventListener("click", function alertEvent() {
+  alert("Bouton cliqué !");
+});
+
 // ---------------------------------------------------------------------------------
 
 // Afficher une alerte au survol d’un texte
 // Crée un paragraphe en HTML. Ajoute un écouteur d’événement mouseover qui affiche une alerte ou change la couleur du texte.
+let colorEvent = document.getElementById("colorEvent");
+colorEvent?.addEventListener("mouseover", function () {
+  alert("Vous avez survolé le texte !");
+});
 
 // ---------------------------------------------------------------------------------
 
 // Modifier le texte d’un bouton au clic
 // Crée un bouton en HTML. À chaque clic, change le texte du bouton entre "Cliqué" et "Cliquez-moi" en utilisant textContent.
+let contentChange = document.getElementById("contentChange");
+contentChange?.addEventListener("click", function () {
+  if (contentChange?.textContent == "Cliqué") {
+    contentChange.textContent = "Cliquez-moi";
+  } else {
+    contentChange.textContent = "Cliqué";
+  }
+});
 
 // ---------------------------------------------------------------------------------
 
