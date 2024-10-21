@@ -71,6 +71,11 @@ if (containerVide) {
 // Basculer entre deux classes avec toggle
 // Crée un bouton et un paragraphe en HTML. Utilise classList.toggle pour ajouter une classe de style (par exemple, highlight) au paragraphe à chaque clic sur le bouton.
 
+let paragraph = document.getElementById("changeColor");
+function highlight() {
+  paragraph?.classList.toggle("highlight");
+}
+
 // ---------------------------------------------------------------------------------
 
 // Gestion des Événements et Interactions
