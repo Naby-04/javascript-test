@@ -128,6 +128,13 @@ imageChange?.addEventListener("mouseout", function Imagechange() {
 
 // Crée un champ <input type="text"> et un <p> vide en HTML. Utilise addEventListener sur l’événement input pour afficher en temps réel la longueur du texte dans le paragraphe.
 
+let input = document.getElementById("input");
+let textLenght = document.getElementById("textLenght");
+
+input?.addEventListener("input", function () {
+  textLenght.textContent = input.value.length;
+});
+
 // ---------------------------------------------------------------------------------
 // Interactions Avancées et Création Dynamique de Contenu
 // Créer un compteur de clics
